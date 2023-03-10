@@ -22,3 +22,6 @@ jobs:
         with:
           branch: gh-pages
           folder: build
+      - name: Get the release version
+      id: get_version
+      run: echo "VERSION=${GITHUB_REF/refs\/tags\/v/}" >> $GITHUB_OUTPUT
