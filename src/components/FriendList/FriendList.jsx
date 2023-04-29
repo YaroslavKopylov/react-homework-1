@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { FriendListItem } from 'components/FriendListItem/FriendListItem';
 
 import { Wrapper } from './FriendList.styled';
@@ -18,4 +19,8 @@ export const FriendList = ({ friends }) => {
       </ul>
     </Wrapper>
   );
+};
+
+FriendList.PropTypes = {
+  friends: PropTypes.string.isRequired,
 };
